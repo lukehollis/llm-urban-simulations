@@ -1,17 +1,7 @@
-https://github.com/user-attachments/assets/b3fd4137-17b8-458d-aa2b-62cfd00902fc
+# Generalist RL/ML AI System for Simulating Agents in Urban Environments
 
+This project is a work-in-progress implementing city-scale agent behaviors for game engine environments using a hybrid RL/ML approach to build realistic simulations. The goal is to be able to more easily have agents available for simulations for a wide range of purposes, especially in urban and transportation planning and supply chain logistics. It's currently in development for Unreal, Unity, and Three.js and integrates with the Unreal city samples project.
 
-
-# Generalist RL/ML AI System for Simulating Humans and Robotics
-
-
-This project is a work-in-progress implementing generalist agent training for game engine environments using a hybrid RL/ML approach to build realistic simulations. The goal is to be able to more easily have agents available for simulations for a wide range of purposes, especially in urban and transportation planning and supply chain logistics. It's currently in development for Unreal, Unity, and Three.js and integrates with the Unreal city samples project.
-
-
-https://github.com/user-attachments/assets/5cee2ebb-da82-46d8-a1f8-ed9a8ac52a9d
-
-
-Example usage in supply chain and manufacturing simulations
 
 https://github.com/user-attachments/assets/d730fd1c-5b08-4699-ad8f-e1a0e8aa44e2
 
@@ -20,7 +10,7 @@ Digital twin of the train system for the Bay Area Rapid Transit Link 21 team.
 
 ![Rome Simulator](https://iiif.mused.com/rome_simulator_mused.jpg/0,240,2048,854/800,/0/default.jpg)
 
-This is currently running the [Civilization Simulations](https://mused.com/explore/simulations/), simulating human history. You can also implement it easily with the [Happy Harvest](https://assetstore.unity.com/packages/essentials/tutorial-projects/happy-harvest-2d-sample-project-259218) 2d template from Unity.
+This currently is used for a variety of 2d games simulation historical environments. You can also implement it easily with the [Happy Harvest](https://assetstore.unity.com/packages/essentials/tutorial-projects/happy-harvest-2d-sample-project-259218) 2d template from Unity.
 
 
 Individual characters can be controlled by RL policy, running inference in engine, and interpret and plan actions with a language model, then visualize their inner state in game.
@@ -29,8 +19,7 @@ Individual characters can be controlled by RL policy, running inference in engin
 
 ![cognitive_architecture](https://github.com/user-attachments/assets/b823d896-94b3-4d85-9550-dce7df5bfe28)
 
-
-Inspired by the [CoALA Cognitive Architectures for Language Agents](https://arxiv.org/abs/2309.02427), the NPCs in the simulations build on a similar version of the language agents but only implement the language model for rational reflection on actions inferred from policy--so a "impulse" from the policy and then considered rational reflection from the language model. 
+Inspired by the [CoALA Cognitive Architectures for Language Agents](https://arxiv.org/abs/2309.02427), the NPCs in the simulations build on a similar version of the language agents but only implement the language model for rational reflection on actions inferred from policy--so an impulse from the policy and then reflection from the language model. 
 
 https://github.com/user-attachments/assets/c42531ca-64e2-4ea9-92a5-a44fab5b04c9
 
@@ -59,8 +48,6 @@ The Mode Shift module simulates how individual agents make transportation choice
 * Current traffic conditions
 * Transit service availability
 
-
-
 https://github.com/user-attachments/assets/ae6daae7-9fb0-4321-ac94-e252f89cb40c
 
 Example usage in the BART train system simulation https://github.com/lukehollis/bart-3d
@@ -70,7 +57,7 @@ Example usage in the BART train system simulation https://github.com/lukehollis/
 Agents use a combination of:
 
 * Reinforcement learning policy for immediate reactions to environment changes
-* Language model reflection for longer-term transportation planning
+* Slower language model reflection for longer-term transportation planning
 * Historical behavior patterns that influence future choices
 
 
@@ -92,13 +79,16 @@ https://github.com/user-attachments/assets/6a457168-6df0-4cf5-ae67-ad5047a77649
 
 In this example, for instance, a heat intensive process can be monitored to predict QA of car battery manufacturing while a spray is applied to a component of the battery in a separate part of the assembly line.
 
+https://github.com/user-attachments/assets/5cee2ebb-da82-46d8-a1f8-ed9a8ac52a9d
+
+
+Example usage in supply chain and manufacturing simulations
 
 
 ## Networked State Management System
 
 Inspired by projects like Photon for Unity networked state management, the state management system orchestrates persistent offline networked states through interconnected components in Unity and the backend (Python/Django connected via websocket) that work together to create a cohesive game world.
 
-The Django repo for the backend is at https://github.com/lukehollis/agentics-backend, to be public soon -- if you want access, just request.
 
 
 #### Conversations
@@ -121,12 +111,8 @@ The world state maintains comprehensive data about the game environment, includi
 
 https://github.com/user-attachments/assets/6887b20e-4f93-4ed8-85f2-05cdb81efdd1
 
-BART train system simulation, coming soon at https://github.com/lukehollis/bart-3d
+BART train system simulation at https://github.com/lukehollis/bart-3d
 
-
-## Active Development 
-
-This project is in active development in public, and I'll update it here for anyone that's interested, but because I release code separately from the 3d art, it does not yet contain a complete functioning standalone project. If you're interested in using the Google Maps photorealistic geotiles, I recommend checking out the [Cesium project](https://github.com/CesiumGS/) for your desired engine. 
 
 
 ## Getting Started
@@ -199,24 +185,6 @@ series = {UIST '23}
 }
 ```
 
-```
-@inproceedings{alonso2024diffusionworldmodelingvisual,
-      title={Diffusion for World Modeling: Visual Details Matter in Atari},
-      author={Eloi Alonso and Adam Jelley and Vincent Micheli and Anssi Kanervisto and Amos Storkey and Tim Pearce and François Fleuret},
-      booktitle={Thirty-eighth Conference on Neural Information Processing Systems}}
-      year={2024},
-      url={https://arxiv.org/abs/2405.12399},
-}
-```
-
-```
-@article{hafner2023dreamerv3,
-  title={Mastering Diverse Domains through World Models},
-  author={Hafner, Danijar and Pasukonis, Jurgis and Ba, Jimmy and Lillicrap, Timothy},
-  journal={arXiv preprint arXiv:2301.04104},
-  year={2023}
-}   
-```
 
 ```
 @article{sima2024,
