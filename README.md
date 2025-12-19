@@ -1,27 +1,14 @@
-# Generalist RL/ML AI System for Simulating Agents in Urban Environments
+# RL+LLM City Simulation System
 
-This project is a work-in-progress implementing city-scale agent behaviors for game engine environments using a hybrid RL/ML approach to build realistic simulations. The goal is to be able to more easily have agents available for simulations for a wide range of purposes, especially in urban and transportation planning and supply chain logistics. It's currently in development for Unreal, Unity, and Three.js and integrates with the Unreal city samples project.
+This project implements city-scale agent behaviors for game engine environments using a hybrid RL+LLM approach to build realistic simulations. The goal is to be able to more easily have agents available for simulations for a wide range of purposes, especially in urban and transportation planning and supply chain logistics. I left off Unity development when it became prohibitively expensive, so this codebase may be generally useful for continued work in Unity, or more simplified implementations may be found in my [three-mlagents](https://lukehollis.github.io/three-mlagents/) library, based on the Unity-MLAgents library of similar name.
+
 
 
 https://github.com/user-attachments/assets/d730fd1c-5b08-4699-ad8f-e1a0e8aa44e2
 
-Digital twin of the train system for the Bay Area Rapid Transit Link 21 team.
-
-
-![Rome Simulator](https://iiif.mused.com/rome_simulator_mused.jpg/0,240,2048,854/800,/0/default.jpg)
-
-This currently is used for a variety of 2d games simulation historical environments. You can also implement it easily with the [Happy Harvest](https://assetstore.unity.com/packages/essentials/tutorial-projects/happy-harvest-2d-sample-project-259218) 2d template from Unity.
-
+_Digital twin of the train system for the Bay Area Rapid Transit Link 21 team._
 
 Individual characters can be controlled by RL policy, running inference in engine, and interpret and plan actions with a language model, then visualize their inner state in game.
-
-## Cognitive Architecture
-
-![cognitive_architecture](https://github.com/user-attachments/assets/b823d896-94b3-4d85-9550-dce7df5bfe28)
-
-Inspired by the [CoALA Cognitive Architectures for Language Agents](https://arxiv.org/abs/2309.02427), the NPCs in the simulations build on a similar version of the language agents but only implement the language model for rational reflection on actions inferred from policy--so an impulse from the policy and then reflection from the language model. 
-
-https://github.com/user-attachments/assets/c42531ca-64e2-4ea9-92a5-a44fab5b04c9
 
 
 ## Instatiating Characters in Environments
@@ -70,19 +57,14 @@ https://github.com/user-attachments/assets/38f2ad40-e490-4d00-9eb2-269f6b6e0596
 
 
 
-## Thermal CFD Simulation (Unreal only)
+## Cognitive Architecture
 
-If you're building simulations for supply chain or manufacturing, you will likely end up needing to simulate thermal conditions for various purposes, such as server performance or cross assembly line interference. 
+![cognitive_architecture](https://github.com/user-attachments/assets/b823d896-94b3-4d85-9550-dce7df5bfe28)
 
+Inspired by the [CoALA Cognitive Architectures for Language Agents](https://arxiv.org/abs/2309.02427), the NPCs in the simulations build on a similar version of the language agents but only implement the language model for rational reflection on actions inferred from policy--so an impulse from the policy and then reflection from the language model. 
 
-https://github.com/user-attachments/assets/6a457168-6df0-4cf5-ae67-ad5047a77649
+https://github.com/user-attachments/assets/c42531ca-64e2-4ea9-92a5-a44fab5b04c9
 
-In this example, for instance, a heat intensive process can be monitored to predict QA of car battery manufacturing while a spray is applied to a component of the battery in a separate part of the assembly line.
-
-https://github.com/user-attachments/assets/5cee2ebb-da82-46d8-a1f8-ed9a8ac52a9d
-
-
-Example usage in supply chain and manufacturing simulations
 
 
 ## Networked State Management System
@@ -148,30 +130,6 @@ python src/collect.py
 # Citations
 
 ```
-@incollection{ha2018worldmodels,
-  title = {Recurrent World Models Facilitate Policy Evolution},
-  author = {Ha, David and Schmidhuber, J{\"u}rgen},
-  booktitle = {Advances in Neural Information Processing Systems 31},
-  pages = {2451--2463},
-  year = {2018},
-  publisher = {Curran Associates, Inc.},
-  url = {https://papers.nips.cc/paper/7512-recurrent-world-models-facilitate-policy-evolution},
-  note = "\url{https://worldmodels.github.io}",
-}
-```
-
-```
-@misc{sumers2023cognitive,
-      title={Cognitive Architectures for Language Agents}, 
-      author={Theodore Sumers and Shunyu Yao and Karthik Narasimhan and Thomas L. Griffiths},
-      year={2023},
-      eprint={2309.02427},
-      archivePrefix={arXiv},
-      primaryClass={cs.AI}
-}
-```
-
-```
 @inproceedings{Park2023GenerativeAgents,  
 author = {Park, Joon Sung and O'Brien, Joseph C. and Cai, Carrie J. and Morris, Meredith Ringel and Liang, Percy and Bernstein, Michael S.},  
 title = {Generative Agents: Interactive Simulacra of Human Behavior},  
@@ -187,14 +145,13 @@ series = {UIST '23}
 
 
 ```
-@article{sima2024,
-    title={SIMA: A Generalist AI Agent for 3D Virtual Environments},
-    author={SIMA Team},
-    journal={Google DeepMind Blog},
-    year={2024},
-    month={March},
-    url={https://deepmind.google/discover/blog/sima-generalist-ai-agent-for-3d-virtual-environments/}
+@misc{sumers2023cognitive,
+      title={Cognitive Architectures for Language Agents}, 
+      author={Theodore Sumers and Shunyu Yao and Karthik Narasimhan and Thomas L. Griffiths},
+      year={2023},
+      eprint={2309.02427},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI}
 }
 ```
-
 
